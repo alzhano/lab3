@@ -18,6 +18,7 @@ class _MyAppState extends State<MyApp> {
       title: "lab_3",
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.teal,
           title: const Text(
             "Lab 3: Layout Basics",
             style: TextStyle(
@@ -26,13 +27,13 @@ class _MyAppState extends State<MyApp> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          backgroundColor: Colors.teal,
         ),
         backgroundColor: Colors.grey[300],
         body: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16),
           child: Column(
             children: [
+              // First Container
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
@@ -48,31 +49,46 @@ class _MyAppState extends State<MyApp> {
                 ),
                 child: const Center(
                   child: Text(
-                    "Welcome to Flutter",
+                    "Welcome to Flutter!",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
+                      fontWeight: FontWeight.bold,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),
+
               const SizedBox(height: 16),
+
+              // Second Container
               Container(
-                padding: const EdgeInsets.all(12),
+                padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
                 decoration: BoxDecoration(
                   color: Colors.green,
                   borderRadius: BorderRadius.circular(8),
+                  border: Border.all(
+                    color: Colors.white,
+                    width: 2,
+                  ),
                 ),
                 child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Text 1",
-                      style: TextStyle(color: Colors.white),
+                      "Left Text",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
                     ),
                     Text(
-                      "Text 2",
-                      style: TextStyle(color: Colors.white),
+                      "Right Text",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
                     ),
                   ],
                 ),
